@@ -1,51 +1,47 @@
-# How to Submit
+# CampusOS — Autonomous Campus Management & AI Senior Agent
 
-## What to Submit
-
-Submit a link to your **public GitHub repository** containing your full solution.
-
-Your repo must include a `README.md` with clear, working steps to run the project locally. We will clone your repo and run it ourselves — if it doesn't start, it won't be judged.
-
----
-
-## Where to Submit
-
-We will share a **Google Form** once the hackathon ends. You must submit your public GitHub repository link through that form — this is the only accepted way to submit.
-
-> Do not email, DM, or share your repo link anywhere else. If it isn't submitted through the form, it won't be judged.
+### Hackathon Project Submission
+* **Track / Category:** AI / Web Application
+* **Team Name:** Autonomous Builders
+* **Team Lead:** Hridoy Sheikh
 
 ---
 
-## Your README Must Include
+## 📌 Project Overview
+**CampusOS** is a unified campus management system and autonomous AI agent designed to streamline university routines, notice broadcasts, room bookings, and assignment tracking.
 
-1. **Project overview** — one paragraph on what you built and how it works
-2. **Tech stack** — languages, frameworks, LLM used, database
-3. **Setup instructions** — exact commands to install dependencies and start the app
-4. **Environment variables** — list every required `.env` key (use `.env.example`). Do not commit real API keys.
-5. **How to use the agent** — a quick note on what kinds of questions to ask
-
----
-
-## Submission Checklist
-
-Before submitting, confirm:
-
-- [ ] Repo is public
-- [ ] All five data sections are visible in the dashboard
-- [ ] Add, edit, and delete work for all five systems and changes persist after reload
-- [ ] README has working local setup steps
-- [ ] No API keys committed to the repo (use `.env.example`)
+### 🌟 Key Features
+1. **Interactive Data Manager (Full CRUD):**
+   - Live viewing, dynamic filtering, and deletion for `schedules`, `rooms`, `events`, `announcements`, and `assignments`.
+   - Complete input forms for inserting live records directly into the SQLite database.
+2. **Campus AI Senior Assistant:**
+   - Powered by Google's `gemini-3.6-flash` model.
+   - Grounded on live campus database via Function Calling (`query_campus_data`, `book_room`, `register_event`).
+   - Zero hallucination — answers queries based purely on real-time academic records.
+3. **Multi-System Architecture:**
+   - High-performance, lightweight SQLite3 database (`campusos.db`) managed via Streamlit.
 
 ---
 
-## Deadline
-
-> **8.30pm, 4 September**
-
-Late submissions will not be accepted.
+## 🛠️ Tech Stack
+* **Frontend:** Streamlit
+* **Database:** SQLite3
+* **AI Model:** Google Gemini (`gemini-3.6-flash`) via `google-genai`
+* **Language:** Python 3.14
 
 ---
 
-## Questions?
+## 🚀 How to Run Locally
 
-Reach out to the organizers through the official hackathon communication channel.
+```bash
+# 1. Clone Repo
+git clone [https://github.com/pathoshridoy/cse-carnival-8-aibuild-hackathon.git](https://github.com/pathoshridoy/cse-carnival-8-aibuild-hackathon.git)
+cd cse-carnival-8-aibuild-hackathon
+
+# 2. Virtual Env & Dependencies
+python3 -m venv .venv
+source .venv/bin/activate
+pip install streamlit google-genai
+
+# 3. Launch App
+streamlit run app.py

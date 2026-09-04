@@ -78,7 +78,7 @@ def register_event(event_name_or_id: str, student_name: str, student_id: str) ->
     return f"Success: {student_name} registered for '{event['name']}'."
 
 def ask_campus_agent(prompt: str) -> str:
-    client = genai.Client(api_key="AQ.Ab8RN6KlGYEW_3s0Uufw-KhqvA6iP3adQamiRb00Mu6c0UPZaQ")
+    client = genai.Client(api_key="AQ.Ab8RN6IPuGZpYUTu4ubyxci1eeci_595Fa7YGE9tYyBd5Nsolw")
     tools = [query_campus_data, book_room, register_event]
     system_instruction = (
         "You are CampusOS AI Agent for university students. "
